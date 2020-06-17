@@ -1,0 +1,45 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<p-panel header="Employee Appraisal Management System">
+  <h2>Employee Details</h2>
+  <div id="personal">
+    <h3>Employee ID : {{ employee.empid }}</h3>
+    <br />
+    <h3>First Name : {{ employee.firstname }}</h3>
+    <br />
+    <h3>Last Name : {{ employee.lastname }}</h3>
+    <br />
+    <h3>Age : {{ employee.age }}</h3>
+    <br />
+    <h3>Phone : {{ employee.phone }}</h3>
+    <br />
+    <h3>Department : {{ employee.department }}</h3>
+    <br />
+    <h3>Designation : {{ employee.designation }}</h3>
+    <br />
+    <h3>Salary : {{ employee.salary | currency }}</h3>
+    <br />
+  </div>
+  <div id="professional">
+    <h3>Productivity : {{ employee.productivity }} / 5</h3>
+    <br />
+    <h3>Attendance : {{ employee.attendance }} %</h3>
+    <br />
+    <h3>Performance Review :</h3>
+    <p>{{ employee.performance }}</p>
+    <br />
+    <h3>Appraisal Status : {{ employee.apprStatus }}</h3>
+  </div>
+  <div id="buttons">
+    <button
+      type="button"
+      label="Edit"
+      class="edit-button"
+      (click)="editEmployee()"
+    >
+      Edit
+    </button>
+    <button type="button" label="Back" class="back-button" (click)="goBack()">
+      Back
+    </button>
+  </div>
+</p-panel>

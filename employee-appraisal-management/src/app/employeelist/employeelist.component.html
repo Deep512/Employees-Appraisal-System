@@ -1,0 +1,27 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<br />
+Search:
+<input type="text" size="30" [(ngModel)]="listFilterBy" />
+<button type="button" class="add-button" (click)="addEmployee()">
+  Add New
+</button>
+<br /><br />
+<p-panel header="Employee Appraisal Management System">
+  <div>
+    <input
+      type="checkbox"
+      id="granted"
+      (change)="checkCheckBoxvalue($event)"
+    /><label for="granted">Granted</label> <br /><br />
+  </div>
+  <div *ngFor="let employee of filteredList">
+    <div id="detail-box">
+      <app-employeedetail
+        [employee]="employee"
+        (refreshEmployeeList)="refreshList()"
+      >
+      </app-employeedetail>
+    </div>
+    <br /><br /><br />
+  </div>
+</p-panel>

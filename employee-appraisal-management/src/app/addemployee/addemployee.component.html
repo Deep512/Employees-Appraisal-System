@@ -1,0 +1,198 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<p-panel header="Employee Appraisal Management System">
+  <mat-form-field>
+    <h3>First Name</h3>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="firstname"
+      [formControl]="first"
+      name="firstname"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;"
+      >Must contains only Alphabets</mat-hint
+    >
+    <mat-error *ngIf="first.invalid" style="font-size: 15px;">{{
+      getErrorFirst()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br /><br />
+  <mat-form-field>
+    <h3>Last Name</h3>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="lastname"
+      [formControl]="last"
+      name="lastname"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;"
+      >Must contains only Alphabets</mat-hint
+    >
+    <mat-error *ngIf="last.invalid" style="font-size: 15px;">{{
+      getErrorLast()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br /><br />
+  <mat-form-field>
+    <h3>Age</h3>
+    <input
+      matInput
+      type="number"
+      [formControl]="Age"
+      [(ngModel)]="age"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;">Must be a number</mat-hint>
+    <mat-error *ngIf="Age.invalid" style="font-size: 15px;">{{
+      getErrorAge()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br />
+  <mat-form-field
+    ><h3>Phone No.</h3>
+    <input matInput [formControl]="phoneNo" [(ngModel)]="phone" required />
+    <mat-hint align="start" style="font-size: 15px;"
+      >10 digit phone number</mat-hint
+    >
+    <mat-error *ngIf="phoneNo.invalid" style="font-size: 15px;">{{
+      getErrorMessage()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br />
+  <mat-form-field>
+    <h3>Department</h3>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="department"
+      [formControl]="dep"
+      name="department"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;"
+      >Must contains only Alphabets</mat-hint
+    >
+    <mat-error *ngIf="dep.invalid" style="font-size: 15px;">{{
+      getErrorDep()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br /><br />
+  <mat-form-field>
+    <h3>Designation</h3>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="designation"
+      [formControl]="des"
+      name="designation"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;"
+      >Must contains only Alphabets</mat-hint
+    >
+    <mat-error *ngIf="des.invalid" style="font-size: 15px;">{{
+      getErrorDes()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br /><br />
+  <mat-form-field>
+    <h3>Salary</h3>
+    <input
+      matInput
+      type="number"
+      name="salary"
+      [(ngModel)]="salary"
+      [formControl]="sal"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;">Must be a number</mat-hint>
+    <mat-error *ngIf="sal.invalid" style="font-size: 15px;">{{
+      getErrorSal()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br />
+
+  <mat-form-field>
+    <h3>Productivity</h3>
+    <input
+      matInput
+      type="number"
+      name="productivity"
+      [(ngModel)]="productivity"
+      [formControl]="prod"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;">Scale out of 5</mat-hint>
+    <mat-error *ngIf="prod.invalid" style="font-size: 15px;">{{
+      getErrorProd()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br /><br />
+  <mat-form-field>
+    <h3>Attendance(%)</h3>
+    <input
+      matInput
+      type="number"
+      name="attendance"
+      [(ngModel)]="attendance"
+      [formControl]="attd"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;">
+      Less than equal to 100</mat-hint
+    >
+    <mat-error *ngIf="attd.invalid" style="font-size: 15px;">{{
+      getErrorAttd()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br /><br />
+  <mat-form-field>
+    <h3>Performance Review</h3>
+    <textarea
+      matInput
+      type="text"
+      style="border: 1px solid;"
+      [(ngModel)]="performance"
+      [formControl]="per"
+      name="performance"
+      required
+    ></textarea>
+    <mat-error *ngIf="per.invalid" style="font-size: 15px;">{{
+      getErrorPer()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br />
+  <mat-form-field>
+    <h3>Appraisal Status</h3>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="apprStatus"
+      [formControl]="appr"
+      name="apprStatus"
+      required
+    />
+    <mat-hint align="start" style="font-size: 15px;"
+      >Granted/ Not Granted/ Not Decided</mat-hint
+    >
+    <mat-error *ngIf="appr.invalid" style="font-size: 15px;">{{
+      getErrorAppr()
+    }}</mat-error>
+  </mat-form-field>
+  <br /><br /><br />
+  <br /><br />
+  <button type="submit" class="save-button" (click)="saveEmployee()">
+    Save
+  </button>
+  <button
+    type="button"
+    label="Cancel"
+    class="cancel-button"
+    (click)="cancelEmployee()"
+  >
+    Cancel
+  </button>
+</p-panel>

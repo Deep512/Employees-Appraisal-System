@@ -1,0 +1,64 @@
+.save-button {
+  padding: 7px 10px 7px 10px;
+  border-radius: 3px;
+  border: 1px solid #007ad9;
+  background-color: #007ad9;
+  cursor: pointer;
+  color: white;
+}
+
+.cancel-button {
+  padding: 7px 10px 7px 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  background-color: lightgrey;
+  cursor: pointer;
+  color: black;
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+input {
+  border-radius: 3px;
+  height: 30px;
+  border: 1px solid lightgrey;
+}
+
+@media screen and (max-width: 500px) {
+  .save-button {
+    padding: 1px 3px 1px 3px;
+    border-radius: 3px;
+    border: 1px solid #007ad9;
+    background-color: #007ad9;
+    cursor: pointer;
+    color: white;
+  }
+
+  h3 {
+    font-size: 90%;
+  }
+
+  textarea {
+    width: 40%;
+  }
+
+  .cancel-button {
+    padding: 1px 3px 1px 3px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+    cursor: pointer;
+    color: black;
+  }
+
+  input {
+    border-radius: 3px;
+    height: 20px;
+    width: 40%;
+    border: 1px solid lightgrey;
+  }
+}

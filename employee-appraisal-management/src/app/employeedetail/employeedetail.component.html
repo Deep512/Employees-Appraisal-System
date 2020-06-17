@@ -1,0 +1,15 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div>{{ employee.firstname }} {{ employee.lastname }}</div>
+<div>Age: {{ employee.age }} Years</div>
+<div>{{ employee.designation }}, {{ employee.department }}</div>
+<div>Appraisal Status : {{ employee.apprStatus }}</div>
+<br />
+<button type="button" class="view-button" (click)="viewEmployee()">
+  View
+</button>
+<button type="button" class="edit-button" (click)="editEmployee()">
+  Edit
+</button>
+<button type="button" class="delete-button" (click)="deleteEmployee()">
+  Delete
+</button>

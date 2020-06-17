@@ -1,0 +1,82 @@
+#personal {
+  float: left;
+  margin-left: 200px;
+}
+
+#professional {
+  float: right;
+  margin-right: 500px;
+}
+
+#buttons {
+  clear: both;
+  margin-left: 200px;
+}
+
+.edit-button {
+  padding: 7px 10px 7px 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: 1px solid #007ad9;
+  background-color: #007ad9;
+  cursor: pointer;
+  color: white;
+}
+
+.back-button {
+  padding: 7px 10px 7px 10px;
+  border-radius: 3px;
+  margin-left: 10px;
+  border: 1px solid lightgrey;
+  background-color: lightgrey;
+  cursor: pointer;
+  color: rgb(3, 3, 3);
+}
+
+@media screen and (min-width: 700px) and (max-width: 1050px) {
+  #personal {
+    margin-left: 0px;
+    clear: both;
+  }
+
+  #professional {
+    margin-left: 0px;
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #buttons {
+    clear: both;
+    margin-left: 0px;
+  }
+  .edit-button {
+    padding: 1px 3px 1px 3px;
+    border-radius: 3px;
+    border: 1px solid #007ad9;
+    background-color: #007ad9;
+    cursor: pointer;
+    color: white;
+  }
+  .back-button {
+    padding: 1px 3px 1px 3px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+    cursor: pointer;
+    color: black;
+  }
+  h3 {
+    font-size: 90%;
+  }
+  #personal {
+    margin-left: 0px;
+    clear: both;
+  }
+
+  #professional {
+    margin-left: 0px;
+    float: left;
+  }
+}
